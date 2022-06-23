@@ -1,6 +1,6 @@
 <?php
 include 'classes/connection.classes.php';
-include 'classes/session.classes.php';
+require 'classes/session.classes.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,7 +14,7 @@ require 'pageview/header.php';
         require 'pageview/preloadchat.php';
         require 'pageview/hkonten.php';
         require 'pageview/sidebar.php';
-        require 'pagekonten/nilai.php';
+        require 'pagekonten/datanilai.php';
         require 'pageview/footer.php';
         ?>
     </div>

@@ -8,6 +8,16 @@
 					</div>
 				</div>
 				<ul class="navbar-nav header-right">
+					<li class="nav-item">
+						<form action="cariuser.php" method="post">
+							<div class="input-group search-area ms-auto d-inline-flex">
+								<input type="text" name="cari" class="form-control input-default" placeholder="Cari User dengan NIM">
+								<div class="input-group-append">
+									<button type="button" class="input-group-text"><i class="flaticon-381-search-2"></i></button>
+								</div>
+							</div>
+						</form>
+					</li>
 					<li class="nav-item dropdown notification_dropdown">
 						<a class="nav-link bell dz-theme-mode active" href="javascript:void(0);">
 							<i id="icon-light" class="far fa-sun"></i>

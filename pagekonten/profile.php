@@ -154,7 +154,7 @@
                                                             </div>
                                                             <div class="mb-3 col-md-12">
                                                                 <label class="form-label">Biodata</label>
-                                                                <textarea name="Biodata" type="password" value="Hello World" class="form-control"></textarea>
+                                                                <textarea name="Biodata" type="password" value="Hello World" class="form-control"><?php echo $bio ?></textarea>
                                                             </div>
                                                         </div>
                                                         <button class="btn btn-block btn-primary" type="button">Submit</button>
