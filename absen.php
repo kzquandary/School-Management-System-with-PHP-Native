@@ -1,6 +1,6 @@
 <?php
-include 'classes/connection.classes.php';
-include 'classes/session.classes.php';
+require 'classes/connection.classes.php';
+require 'classes/session.classes.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
