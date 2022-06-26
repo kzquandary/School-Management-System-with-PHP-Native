@@ -124,7 +124,7 @@
                             $namawali = $ardosen['nama'];
 
                             $sql = "INSERT INTO `mahasiswa`(`nim`, `nama`, `email`, `gender`, `fakultas`, `jurusan`, `kelas`, `birthdate`, `semester`, `wali`, `status`, `bio`, `profil`, `sampul`) VALUES 
-                            ('$nim','$nama','$email','$gender','$fakultas','$jurusan','$kelas','$tanggal','$semester','$wali','Aktif','Halo saya $namawali','profile/KazeProfile.jpeg','sampul/KazeSampul.jpeg')";
+                            ('$nim','$nama','$email','$gender','$fakultas','$jurusan','$kelas','$tanggal','$semester','$namawali','Aktif','Halo saya $namawali','profile/KazeProfile.jpeg','sampul/KazeSampul.jpeg')";
 
                             $sql0 = "INSERT INTO `user`(`kode_login`, `password`, `status`, `email`) VALUES 
                             ('$nim','a25e7ea9ad877e9dc33f1d671aa00d4c','1','$email')";

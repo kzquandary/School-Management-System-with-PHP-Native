@@ -33,7 +33,7 @@
                 </li>
             <?php } ?>
             <?php if ($status == "2") { ?>
-                <li><a href="dataabsen.php" class="ai-icon">
+                <li><a href="isidbabsen.php" class="ai-icon">
                         <i class="flaticon-table"></i>
                         <span class="nav-text">Data Absen</span>
                     </a>
