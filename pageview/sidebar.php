@@ -39,6 +39,13 @@
                     </a>
                 </li>
             <?php } ?>
+            <?php if ($status == "2") { ?>
+                <li><a href="tbmahasiswa.php" class="ai-icon">
+                        <i class="flaticon-user"></i>
+                        <span class="nav-text">Tambah Mahasiswa</span>
+                    </a>
+                </li>
+            <?php } ?>
 
             <li><a class="ai-icon" href="mahasiswa.php">
                     <i class="flaticon-newsletter"></i>
