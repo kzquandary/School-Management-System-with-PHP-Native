@@ -34,6 +34,7 @@
                         <center><img src="css/loader.gif" id="loader"></center>
                         <div id="data-nilai">
                             <?php if (isset($_POST['submit'])) {
+                                $nim = $_POST['nim'];
                                 $tugas1 = $_POST['tugas1'];
                                 $tugas2 = $_POST['tugas2'];
                                 $tugas3 = $_POST['tugas3'];
@@ -45,7 +46,7 @@
                                 $akhir = $_POST['akhir'];
 
 
-                                $sql = "UPDATE `nilai` SET `tugas 1`='$tugas1',`tugas 2`='$tugas2',`tugas 3`='$tugas3',`tugas 4`='$tugas4',`tugas 5`='$tugas5',`absensi`='$absensi',`uts`='$uts',`uas`='$uas',`nilai akhir`='$akhir' WHERE 1";
+                                $sql = "UPDATE `nilai`  SET `tugas 1`='$tugas1',`tugas 2`='$tugas2',`tugas 3`='$tugas3',`tugas 4`='$tugas4',`tugas 5`='$tugas5',`absensi`='$absensi',`uts`='$uts',`uas`='$uas',`nilai akhir`='$akhir' WHERE nim='$nim'";
                                 if (mysqli_query($con, $sql)) {
                                     echo '<div class="alert alert-success solid alert-square "><strong>Sukses !</strong> Nilai telah ditambahkan.</div>';
                                 } else {

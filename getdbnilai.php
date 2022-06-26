@@ -16,6 +16,12 @@ $keymhs = mysqli_fetch_array($qdbmhs);
                         </div>
                     </div>
                     <div class="mb-3 row">
+                        <label class="col-sm-2 col-form-label col-form-label-lg">NIM</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="nim" class="form-control form-control-lg" value="<?= $nim ?>" required />
+                        </div>
+                    </div>
+                    <div class="mb-3 row">
                         <label class="col-sm-2 col-form-label col-form-label-lg">Tugas 1</label>
                         <div class="col-sm-10">
                             <input type="text" name="tugas1" class="form-control form-control-lg" value="<?= $keymhs['tugas 1'] ?>" required />
