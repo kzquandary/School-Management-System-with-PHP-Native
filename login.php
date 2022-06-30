@@ -52,14 +52,14 @@ require 'pageview/header.php';
                                             <?php endif; ?>
                                         <?php } ?>
                                     </center>
-                                    <form action="loginact.php" method="post">
+                                    <form action="loginact.php" method="post" autocomplete="on">
                                         <div class="form-group">
                                             <label class="mb-1"><strong>Kode Login</strong></label>
-                                            <input type="text" class="form-control" name="kode_login" id="kode_login" placeholder="Kode Login" require>
+                                            <input type="text" value="<?php echo isset($kode_login) ?>" class="form-control" autocomplete="on" name="kode_login" id="kode_login" placeholder="Kode Login" require>
                                         </div>
                                         <div class="form-group">
                                             <label class="mb-1"><strong>Password</strong></label>
-                                            <input type="password" class="form-control" name="password" id="password" placeholder="Password" require>
+                                            <input type="password" class="form-control" autocomplete="on" name="password" id="password" placeholder="Password" require>
                                         </div>
                                         <!-- <div class="form-row d-flex justify-content-between mt-4 mb-2">
                                             <div class="form-group">

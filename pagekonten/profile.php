@@ -1,3 +1,8 @@
+<?php
+$email = $_POST['email'];
+$password = $_POST['password'];
+$biodata = $_POST['biodata'];
+?>
 <div class="content-body">
     <div class="container-fluid">
         <div class="row page-titles mx-0">
@@ -135,6 +140,30 @@
                                                 <h4 class="text-primary">Biodata</h4>
                                                 <p class="mb-2"><?php echo $biop; ?></p>
                                             </div>
+                                            <?php if (isset($_GET['pesan'])) :
+                                                if ($_GET['pesan'] == "Gagal") : ?>
+                                                    <div class="alert alert-danger alert-dismissible fade show">
+                                                        <svg viewbox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="me-2">
+                                                            <polyline points="9 11 12 14 22 4"></polyline>
+                                                            <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+                                                        </svg>
+                                                        <strong>Gagal!</strong> Data belum diubah.
+                                                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="btn-close">
+                                                        </button>
+                                                    </div>
+                                                <?php endif; ?>
+                                                <?php if ($_GET['pesan'] == "Sukses") : ?>
+                                                    <div class="alert alert-success alert-dismissible fade show">
+                                                        <svg viewbox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="me-2">
+                                                            <polyline points="9 11 12 14 22 4"></polyline>
+                                                            <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+                                                        </svg>
+                                                        <strong>Sukses!</strong> Data telah diubah.
+                                                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="btn-close">
+                                                        </button>
+                                                    </div>
+                                                <?php endif; ?>
+                                            <?php endif; ?>
                                         </div>
                                     </div>
                                     <?php if ($_SESSION['kode_login'] == $_GET['id']) { ?>
@@ -142,7 +171,7 @@
                                             <div class="pt-3">
                                                 <div class="settings-form">
                                                     <h4 class="text-primary">Account Setting</h4>
-                                                    <form>
+                                                    <form method="post" action="profil.php?id=<?php echo $_SESSION['kode_login'] ?>">
                                                         <div class="row">
                                                             <div class="mb-3 col-md-6">
                                                                 <label class="form-label">Email</label>
@@ -154,7 +183,7 @@
                                                             </div>
                                                             <div class="mb-3 col-md-12">
                                                                 <label class="form-label">Biodata</label>
-                                                                <textarea name="Biodata" type="password" value="Hello World" class="form-control"><?php echo $bio ?></textarea>
+                                                                <textarea name="biodata" type="password" value="Hello World" class="form-control"><?php echo $bio ?></textarea>
                                                             </div>
                                                         </div>
                                                         <button class="btn btn-block btn-primary" type="button">Submit</button>
