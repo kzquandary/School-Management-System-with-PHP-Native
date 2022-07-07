@@ -1,8 +1,3 @@
-<?php
-$email = $_POST['email'];
-$password = $_POST['password'];
-$biodata = $_POST['biodata'];
-?>
 <div class="content-body">
     <div class="container-fluid">
         <div class="row page-titles mx-0">
@@ -96,7 +91,7 @@ $biodata = $_POST['biodata'];
                                                     $hasilalpha = mysqli_query($con, $alpha);
                                                     $totalalpha = mysqli_num_rows($hasilalpha);
                                                     // Mengambil Data Status Sakit
-                                                    $sakit = "SELECT * FROM absen WHERE nim='$_GET[id]p' and kehadiran='Sakit' or kehadiran='Izin'";
+                                                    $sakit = "SELECT * FROM absen WHERE nim='$_GET[id]' and kehadiran='Sakit' or kehadiran='Izin'";
                                                     $hasilsakit = mysqli_query($con, $sakit);
                                                     $totalsakit = mysqli_num_rows($hasilsakit);
                                                     ?>
